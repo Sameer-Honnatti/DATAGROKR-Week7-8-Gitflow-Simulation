@@ -9,7 +9,7 @@ def add_task(tasks, title):
         "id": len(tasks) + 1,
         "title": title,
         "completed": False,
-        "priority": "Medium"
+        "priority": "Low"
     }
 
     tasks.append(task)
