@@ -1,0 +1,14 @@
+#!/bin/sh
+
+commit_message=$(cat "$1")
+
+if ! echo "$commit_message" | grep -Eq "^(feat|fix|docs|test|refactor|chore): .+"; then
+    echo "Invalid commit message!"
+    echo "Use: feat: add new feature"
+    echo "     fix: correct a bug"
+    echo "     docs: update documentation"
+    exit 1
+fi
+
+echo "Commit message format is valid."
+exit 0
